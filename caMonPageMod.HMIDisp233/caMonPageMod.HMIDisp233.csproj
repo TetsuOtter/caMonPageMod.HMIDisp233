@@ -2,7 +2,166 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+		<LangVersion>9.0</LangVersion>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="resources\E233_Meter2\0\E233_Lamp1_ATS-PNB.png" />
+    <None Remove="resources\E233_Meter2\0\E233_Lamp1_PBO.png" />
+    <None Remove="resources\E233_Meter2\0\E233_Lamp1_PEB.png" />
+    <None Remove="resources\E233_Meter2\0\E233_Lamp1_PM.png" />
+    <None Remove="resources\E233_Meter2\0\E233_Lamp1_PPow.png" />
+    <None Remove="resources\E233_Meter2\0\E233_Lamp1_PPTN.png" />
+    <None Remove="resources\E233_Meter2\0\E233_Meter2BG_ATS.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCBS.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCEB.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCNB.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCO.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCOff.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCPL.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATCPow.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_ATSPow.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_CDAC.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_DATC.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_EMOS.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_FDAC.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_FDI.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_FDICO.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_FP.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_INT.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_TASCB.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_TASCCO.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_TASCMC.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_TASCP.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Lamp1_TASCPt.png" />
+    <None Remove="resources\E233_Meter2\1000\E233_Meter2BG_ATS.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_ChangeBG_ATS.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp1_ATCEB.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp1_ATCNB.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp1_ATCPow.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp1_FDAC.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp1_FDI.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp1_FDICO.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_ATC.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_ATSB.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_ATSPow.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_In.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_JR.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_Metro.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_NoATC.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_TASC.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_TASCB.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Lamp2_TASCC.png" />
+    <None Remove="resources\E233_Meter2\2000\E233_Meter2BG_ATC.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2BG_ATC.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2BG_ATS.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_ATSP.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_key_SC.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_key_SC_T.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_PBO.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_PEB.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_PM.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_PNB.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_PPow.png" />
+    <None Remove="resources\E233_Meter2\6000\E233_Meter2_PPTN.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_1sMC.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_2sMC.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_AIDTr.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ASTP.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ATACS.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ATACSCO.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ATACSEB.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ATACSMC.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ATACSNB.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_ATACSP.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_BwD.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_Cut.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_EmO.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Lamp2_PtnL.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Meter2BG_ATACS.png" />
+    <None Remove="resources\E233_Meter2\7000\E233_Meter2BG_ATS.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="caMon.IPages" Version="1.0.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="resources\E233_Meter2\0\E233_Lamp1_ATS-PNB.png" />
+    <Resource Include="resources\E233_Meter2\0\E233_Lamp1_PBO.png" />
+    <Resource Include="resources\E233_Meter2\0\E233_Lamp1_PEB.png" />
+    <Resource Include="resources\E233_Meter2\0\E233_Lamp1_PM.png" />
+    <Resource Include="resources\E233_Meter2\0\E233_Lamp1_PPow.png" />
+    <Resource Include="resources\E233_Meter2\0\E233_Lamp1_PPTN.png" />
+    <Resource Include="resources\E233_Meter2\0\E233_Meter2BG_ATS.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCBS.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCEB.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCNB.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCO.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCOff.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCPL.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATCPow.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_ATSPow.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_CDAC.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_DATC.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_EMOS.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_FDAC.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_FDI.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_FDICO.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_FP.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_INT.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_TASCB.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_TASCCO.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_TASCMC.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_TASCP.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Lamp1_TASCPt.png" />
+    <Resource Include="resources\E233_Meter2\1000\E233_Meter2BG_ATS.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_ChangeBG_ATS.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp1_ATCEB.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp1_ATCNB.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp1_ATCPow.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp1_FDAC.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp1_FDI.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp1_FDICO.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_ATC.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_ATSB.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_ATSPow.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_In.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_JR.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_Metro.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_NoATC.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_TASC.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_TASCB.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Lamp2_TASCC.png" />
+    <Resource Include="resources\E233_Meter2\2000\E233_Meter2BG_ATC.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2BG_ATC.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2BG_ATS.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_ATSP.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_key_SC.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_key_SC_T.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_PBO.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_PEB.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_PM.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_PNB.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_PPow.png" />
+    <Resource Include="resources\E233_Meter2\6000\E233_Meter2_PPTN.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_1sMC.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_2sMC.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_AIDTr.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ASTP.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ATACS.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ATACSCO.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ATACSEB.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ATACSMC.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ATACSNB.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_ATACSP.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_BwD.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_Cut.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_EmO.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Lamp2_PtnL.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Meter2BG_ATACS.png" />
+    <Resource Include="resources\E233_Meter2\7000\E233_Meter2BG_ATS.png" />
+  </ItemGroup>
 
 </Project>

@@ -1,0 +1,60 @@
+﻿<Page x:Class="caMonPageMod.HMIDisp233.TopPage"
+			xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+			xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+			xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+			xmlns:local="clr-namespace:caMonPageMod.HMIDisp233"
+			mc:Ignorable="d" 
+			FontSize="18"
+			d:DesignHeight="600" d:DesignWidth="800"
+			Title="TopPage">
+
+	<Grid>
+		<Viewbox>
+			<Grid Height="600" Width="800" Background="#1B2226">
+				<ContentPresenter x:Name="CP"/>
+
+				<Button Height="31" Width="38" Margin="4" HorizontalAlignment="Left" VerticalAlignment="Top" Click="SelBtnClick">
+					<Button.Template>
+						<ControlTemplate TargetType="Button">
+							<Image x:Name="img" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_key_SC.png"/>
+							<ControlTemplate.Triggers>
+								<Trigger Property="IsPressed" Value="True">
+									<Setter TargetName="img" Property="Source" Value="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_key_SC_T.png"/>
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Button.Template>
+				</Button>
+			</Grid>
+		</Viewbox>
+		<StackPanel x:Name="PageSelPopUp" Background="#8FFF" HorizontalAlignment="Center" VerticalAlignment="Center">
+			<StackPanel.Resources>
+				<Style TargetType="Button">
+					<Setter Property="Margin" Value="10"/>
+					<Setter Property="Padding" Value="20,5"/>
+					<Setter Property="HorizontalAlignment" Value="Center"/>
+					<Setter Property="VerticalAlignment" Value="Center"/>
+					<EventSetter Event="Click" Handler="Button_Click"/>
+				</Style>
+			</StackPanel.Resources>
+			<Button x:Name="none" Content="None"/>
+			<Button x:Name="typ0" Content="ATS-P/Sn (E233-0/3k/5k/11k)"/>
+			<Button x:Name="typ1" Content="D-ATC + TASC/FD (E233-1k)"/>
+			<Button x:Name="typ2" Content="CS-ATC(ATC-10) + TASC/FD (E233-2k)"/>
+			<Button x:Name="typ6p" Content="E233-6k (ATS-P + TASC/FD)"/>
+			<Button x:Name="typ6d" Content="E233-6k (D-ATC + TASC/FD)"/>
+			<Button x:Name="typ7" Content="E233-7k (ATS/ATACS Auto Detect)"/>
+			<Button x:Name="typ7p" Content="E233-7k (ATS-P)"/>
+			<Button x:Name="typ7r" Content="E233-7k (ATACS)"/>
+
+			<Grid>
+				<Button HorizontalAlignment="Left" Content="Go Home" Click="GoHome"/>
+				<Button HorizontalAlignment="Right" Content="Close App" Click="CloseAppInv"/>
+			</Grid>
+			<StackPanel.BitmapEffect>
+				<DropShadowBitmapEffect/>
+			</StackPanel.BitmapEffect>
+		</StackPanel>
+	</Grid>
+</Page>
