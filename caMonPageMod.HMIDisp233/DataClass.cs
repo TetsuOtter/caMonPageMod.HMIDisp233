@@ -41,7 +41,7 @@ namespace caMonPageMod.HMIDisp233
 		public PanelToBoolClass INT { get; } = new PanelToBoolClass(89);
 		#endregion TASC
 
-		#region FD (対応プラグインなし?)
+		#region FD
 		public PanelToBoolClass FP { get; } = new PanelToBoolClass(226);
 		public PanelToBoolClass CDAC { get; } = new PanelToBoolClass(227);
 		public PanelToBoolClass FDAC { get; } = new PanelToBoolClass(228);
