@@ -37,16 +37,16 @@
 
 			<!--#region L0-->
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PPow}"
+						 DataContext="{Binding DATC}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_DATC.png"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PPTN}"
+						 DataContext="{Binding ATC}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/2000/E233_Lamp2_ATC.png"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding ATS_PNB}"
+						 DataContext="{Binding ATCOff}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCOff.png"/>
 			<Image Style="{StaticResource L0}"
