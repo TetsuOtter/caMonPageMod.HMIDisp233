@@ -49,7 +49,7 @@
 			<Image Style="{StaticResource Lamp}"
 						 DataContext="{Binding ATSP}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
-						 Canvas.Left="437" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Lamp1_ATSP.png"/>
+						 Canvas.Left="437" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_ATSP.png"/>
 			<Image Style="{StaticResource Lamp}"
 						 DataContext="{Binding PM}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
