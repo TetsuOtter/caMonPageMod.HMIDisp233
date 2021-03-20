@@ -1,0 +1,160 @@
+﻿<UserControl x:Class="caMonPageMod.HMIDisp233.No2.Type7k"
+						 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+						 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+						 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+						 xmlns:local="clr-namespace:caMonPageMod.HMIDisp233.No2"
+						 xmlns:hmidisp233="clr-namespace:caMonPageMod.HMIDisp233"
+						 d:DataContext="{d:DesignInstance Type=hmidisp233:DataClass}"
+						 mc:Ignorable="d" 
+						 d:DesignHeight="600" d:DesignWidth="800">
+	<UserControl.Resources>
+		<hmidisp233:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
+		<Style TargetType="Image" x:Key="LampBase">
+			<Setter Property="Stretch" Value="Fill"/>
+		</Style>
+	</UserControl.Resources>
+	
+	<Grid Height="600" Width="800" Background="#1B2226">
+		<Canvas x:Name="ATS" Visibility="Collapsed">
+			<Canvas.Resources>
+				<Style TargetType="Image" x:Key="Lamp" BasedOn="{StaticResource LampBase}">
+					<Setter Property="Height" Value="162"/>
+					<Setter Property="Width" Value="56"/>
+					<Setter Property="Canvas.Top" Value="14"/>
+				</Style>
+			</Canvas.Resources>
+			<Image Stretch="Fill" Height="600" Width="800" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Meter2BG_ATS.png"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding PPow}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PPow.png"
+						 Canvas.Left="114"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding PPTN}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PPTN.png"
+						 Canvas.Left="200"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding ATS_PNB}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PNB.png"
+						 Canvas.Left="286"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding PEB}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PEB.png"
+						 Canvas.Left="372"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding PBO}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PBO.png"
+						 Canvas.Left="458"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding ATSP}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_ATSP.png"
+						 Canvas.Left="544"/>
+			<Image Style="{StaticResource Lamp}"
+						 DataContext="{Binding PM}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PM.png"
+						 Canvas.Left="630"/>
+		</Canvas>
+
+		<Canvas x:Name="ATC" Visibility="Collapsed"/>
+
+		<Canvas x:Name="ATACS" Visibility="Collapsed">
+			<Canvas.Resources>
+				<Style TargetType="Image" x:Key="L0" BasedOn="{StaticResource LampBase}">
+					<Setter Property="Height" Value="130"/>
+					<Setter Property="Width" Value="68"/>
+					<Setter Property="Canvas.Top" Value="7"/>
+				</Style>
+				<Style TargetType="Image" x:Key="L1" BasedOn="{StaticResource LampBase}">
+					<Setter Property="Height" Value="130"/>
+					<Setter Property="Width" Value="68"/>
+					<Setter Property="Canvas.Top" Value="158"/>
+				</Style>
+			</Canvas.Resources>
+			<Image Stretch="Fill" Height="600" Width="800" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Meter2BG_ATACS.png"/>
+
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding AIDTr}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_AIDTr.png"
+						 Canvas.Left="122"/>
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding ATACS}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ATACS.png"
+						 Canvas.Left="202"/>
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding Cut}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_Cut.png"
+						 Canvas.Left="282"/>
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding PtnL}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_PtnL.png"
+						 Canvas.Left="362"/>
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding EmO}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_EmO.png"
+						 Canvas.Left="442"/>
+
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding BwD}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_BwD.png"
+						 Canvas.Left="558"/>
+			<Image Style="{StaticResource L0}"
+						 DataContext="{Binding ATACSMC}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ATACSMC.png"
+						 Canvas.Left="638"/>
+
+
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding ATACSNB}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ATACSNB.png"
+						 Canvas.Left="122"/>
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding ATACSEB}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ATACSEB.png"
+						 Canvas.Left="202"/>
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding ASTP}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ASTP.png"
+						 Canvas.Left="282"/>
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding ATACSP}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ATACSP.png"
+						 Canvas.Left="362"/>
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding ATACSCO}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_ATACSCO.png"
+						 Canvas.Left="442"/>
+
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding _1sMC}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_1sMC.png"
+						 Canvas.Left="558"/>
+			<Image Style="{StaticResource L1}"
+						 DataContext="{Binding _2sMC}"
+						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
+						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/7000/E233_Lamp2_2sMC.png"
+						 Canvas.Left="638"/>
+
+
+		</Canvas>
+	</Grid>
+</UserControl>

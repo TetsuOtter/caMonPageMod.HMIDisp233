@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "caMonPageMod.HMIDisp233": {
+      "commandName": "Executable",
+      "executablePath": "D:\\caMon\\caMon.exe",
+      "commandLineArgs": "$(TargetFileName)"
+    }
+  }
+}
