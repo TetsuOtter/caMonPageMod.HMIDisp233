@@ -15,8 +15,8 @@ namespace caMonPageMod.HMIDisp233
 		#endregion ATS-P
 
 		#region ATS-Sn
-		public PanelToBoolClass ATSPow { get; } = new PanelToBoolClass();
-		public PanelToBoolClass ATSB { get; } = new PanelToBoolClass();
+		public PanelToBoolClass ATSPow { get; } = new PanelToBoolClass(0);
+		public PanelToBoolClass ATSB { get; } = new PanelToBoolClass(1);
 		#endregion ATS-Sn
 
 		#region D-ATC / ATC-10(CS-ATC)  D-ATCは対応プラグインなし
@@ -42,16 +42,16 @@ namespace caMonPageMod.HMIDisp233
 		#endregion TASC
 
 		#region FD (対応プラグインなし?)
-		public PanelToBoolClass FP { get; } = new PanelToBoolClass();
-		public PanelToBoolClass CDAC { get; } = new PanelToBoolClass();
-		public PanelToBoolClass FDAC { get; } = new PanelToBoolClass();
-		public PanelToBoolClass FDI { get; } = new PanelToBoolClass();
-		public PanelToBoolClass FDICO { get; } = new PanelToBoolClass();
+		public PanelToBoolClass FP { get; } = new PanelToBoolClass(226);
+		public PanelToBoolClass CDAC { get; } = new PanelToBoolClass(227);
+		public PanelToBoolClass FDAC { get; } = new PanelToBoolClass(228);
+		public PanelToBoolClass FDI { get; } = new PanelToBoolClass(229);
+		public PanelToBoolClass FDICO { get; } = new PanelToBoolClass(230);
 		#endregion FD
 
 		#region 233-2k
-		public PanelToBoolClass TASC { get; } = new PanelToBoolClass(85);//推測
-		public PanelToBoolClass TASCC { get; } = new PanelToBoolClass(86);//推測
+		public PanelToBoolClass TASC { get => TASCP; }//推測
+		public PanelToBoolClass TASCC { get => TASCPt; }//推測
 		public PanelToBoolClass Metro { get; } = new PanelToBoolClass(37);
 		public PanelToBoolClass JR { get; } = new PanelToBoolClass(36);
 		public PanelToBoolClass In { get; } = new PanelToBoolClass(55);
