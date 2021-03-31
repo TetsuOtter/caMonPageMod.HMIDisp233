@@ -84,7 +84,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="caMon.IPages" Version="1.0.0.2" />
+    <PackageReference Include="BIDSDataUpdateNotifier" Version="1.0.0" />
+    <PackageReference Include="caMon.IPages" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
