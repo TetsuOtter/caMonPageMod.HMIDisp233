@@ -5,7 +5,7 @@
 						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 						 xmlns:local="clr-namespace:caMonPageMod.HMIDisp233.No2"
 						 xmlns:hmidisp233="clr-namespace:caMonPageMod.HMIDisp233"
-						 d:DataContext="{d:DesignInstance Type=hmidisp233:DataClass}"
+						 d:DataContext="{d:DesignInstance Type=hmidisp233:HoanLampStates}"
 						 mc:Ignorable="d" 
 						 d:DesignHeight="600" d:DesignWidth="800">
 	<UserControl.Resources>
@@ -26,41 +26,41 @@
 			</Canvas.Resources>
 			<Image Stretch="Fill" Height="600" Width="800" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Meter2BG_ATS.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding PPow}"
+						 DataContext="{Binding ATSP.Power}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="57"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Lamp1_PPow.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding PPTN}"
+						 DataContext="{Binding ATSP.PatternOnComing}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="133" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Lamp1_PPTN.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding ATS_PNB}"
+						 DataContext="{Binding ATSP.NormalBrake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="209" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Lamp1_ATS-PNB.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding PEB}"
+						 DataContext="{Binding ATSP.EmergencyBrake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="285" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Lamp1_PEB.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding PBO}"
+						 DataContext="{Binding ATSP.BrakeCutOut}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="361" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Lamp1_PBO.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding ATSP}"
+						 DataContext="{Binding ATSP.ATSP}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="437" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_ATSP.png"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding PM}"
+						 DataContext="{Binding ATSP.Fault}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="513" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/0/E233_Lamp1_PM.png"/>
 
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding ATSPow}"
+						 DataContext="{Binding ATSSn.WhiteLamp}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="611"/>
 			<Image Style="{StaticResource Lamp}"
-						 DataContext="{Binding ATSB}"
+						 DataContext="{Binding ATSSn.RedLamp}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="687"/>
 		</Canvas>

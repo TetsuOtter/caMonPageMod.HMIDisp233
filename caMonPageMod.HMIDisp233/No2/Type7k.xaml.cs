@@ -1,5 +1,9 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
 using System.Windows.Controls;
+
+using TR;
+using TR.BIDSSMemLib;
 
 namespace caMonPageMod.HMIDisp233.No2
 {
@@ -9,7 +13,7 @@ namespace caMonPageMod.HMIDisp233.No2
 	public partial class Type7k : UserControl
 	{
 		public enum Mode { Auto, ATACS, ATSP, ATC6 }
-		public Type7k(DataClass dc, Mode mode)
+		public Type7k(HoanLampStates dc, Mode mode)
 		{
 			DataContext = dc;
 			InitializeComponent();
@@ -29,23 +33,23 @@ namespace caMonPageMod.HMIDisp233.No2
 
 		private void Type7k_Loaded(object sender, RoutedEventArgs e)
 		{
-			TR.BIDSSMemLib.SMemLib.PanelDChanged += SMemLib_PanelDChanged;
+			SMemLib.SMC_PanelDChanged += SMC_SMemLib_PanelDChanged;
 		}
 
 		private void Type7k_Unloaded(object sender, RoutedEventArgs e)
 		{
-			TR.BIDSSMemLib.SMemLib.PanelDChanged -= SMemLib_PanelDChanged;
+			SMemLib.SMC_PanelDChanged -= SMC_SMemLib_PanelDChanged;
 		}
 
-		private void SMemLib_PanelDChanged(object sender, TR.BIDSSMemLib.SMemLib.ArrayDChangedEArgs e)
+		private void SMC_SMemLib_PanelDChanged(object sender, ValueChangedEventArgs<int[]> e)
 		{
-			if (e.NewArray.Length >= 256)
+			if (e.NewValue.Length >= 256)
 			{
 				Visibility v_ats = Visibility.Collapsed;
 				Visibility v_atc = Visibility.Collapsed;
 				Visibility v_atacs = Visibility.Collapsed;
 
-				switch (e.NewArray[254])
+				switch (e.NewValue[254])
 				{
 					case 0:
 						v_ats = Visibility.Visible;

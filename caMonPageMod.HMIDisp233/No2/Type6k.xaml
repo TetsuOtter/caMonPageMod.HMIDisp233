@@ -5,7 +5,7 @@
 						 xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
 						 xmlns:local="clr-namespace:caMonPageMod.HMIDisp233.No2"
 						 xmlns:hmidisp233="clr-namespace:caMonPageMod.HMIDisp233"
-						 d:DataContext="{d:DesignInstance Type=hmidisp233:DataClass}"
+						 d:DataContext="{d:DesignInstance Type=hmidisp233:HoanLampStates}"
 						 mc:Ignorable="d" 
 						 d:DesignHeight="600" d:DesignWidth="800">
 	<UserControl.Resources>
@@ -37,100 +37,100 @@
 
 			<!--#region L0-->
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding DATC}"
+						 DataContext="{Binding DATC.DATC}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_DATC.png"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding ATC}"
+						 DataContext="{Binding DATC.ATC}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/2000/E233_Lamp2_ATC.png"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding ATCOff}"
+						 DataContext="{Binding DATC.Off}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCOff.png"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding ATCPL}"
+						 DataContext="{Binding DATC.LowerPattern}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="406" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCPL.png"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding EMOS}"
+						 DataContext="{Binding DATC.EmergencyOperation}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="486" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_EMOS.png"/>
 			<!--#endregion-->
 
 			<!--#region L1-->
 			<Image Style="{StaticResource L1}"
-						 DataContext="{Binding ATCNB}"
+						 DataContext="{Binding DATC.NormalBrake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCNB.png"/>
 			<Image Style="{StaticResource L1}"
-						 DataContext="{Binding ATCEB}"
+						 DataContext="{Binding DATC.EmergencyBrake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCEB.png"/>
 			<Image Style="{StaticResource L1}"
-						 DataContext="{Binding ATCBS}"
+						 DataContext="{Binding DATC.MisspassingPreventer}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCBS.png"/>
 			<Image Style="{StaticResource L1}"
-						 DataContext="{Binding ATCPow}"
+						 DataContext="{Binding DATC.Power}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="406" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCPow.png"/>
 			<Image Style="{StaticResource L1}"
-						 DataContext="{Binding ATCO}"
+						 DataContext="{Binding DATC.CutOut}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="486" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_ATCO.png"/>
 			<!--#endregion-->
 
 			<!--#region L2-->
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCP}"
+						 DataContext="{Binding TASC.Power}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCP.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCPt}"
+						 DataContext="{Binding TASC.Pattern}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCPt.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCB}"
+						 DataContext="{Binding TASC.Brake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCB.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCCO}"
+						 DataContext="{Binding TASC.Off}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="406" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCCO.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCMC}"
+						 DataContext="{Binding TASC.Fault}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="486" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCMC.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding INT}"
+						 DataContext="{Binding TASC.Inching}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="566" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_INT.png"/>
 			<!--#endregion-->
 
 			<!--#region L3-->
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FP}"
+						 DataContext="{Binding FD.JustPoint}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FP.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding CDAC}"
+						 DataContext="{Binding FD.CarDoorAllClosd}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_CDAC.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FDAC}"
+						 DataContext="{Binding FD.FDAllClosed}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FDAC.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FDI}"
+						 DataContext="{Binding FD.SystemConnected}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="406" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FDI.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FDICO}"
+						 DataContext="{Binding FD.SystemDisconnected}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="486" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FDICO.png"/>
 			<!--#endregion-->
@@ -155,37 +155,37 @@
 
 			<!--#region L0-->
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PPow}"
+						 DataContext="{Binding ATSP.Power}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PPow.png"
 						 Canvas.Left="114"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PPTN}"
+						 DataContext="{Binding ATSP.PatternOnComing}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PPTN.png"
 						 Canvas.Left="200"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding ATS_PNB}"
+						 DataContext="{Binding ATSP.NormalBrake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PNB.png"
 						 Canvas.Left="286"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PEB}"
+						 DataContext="{Binding ATSP.EmergencyBrake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PEB.png"
 						 Canvas.Left="372"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PBO}"
+						 DataContext="{Binding ATSP.BrakeCutOut}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PBO.png"
 						 Canvas.Left="458"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding ATSP}"
+						 DataContext="{Binding ATSP.ATSP}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_ATSP.png"
 						 Canvas.Left="544"/>
 			<Image Style="{StaticResource L0}"
-						 DataContext="{Binding PM}"
+						 DataContext="{Binding ATSP.Fault}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/6000/E233_Meter2_PM.png"
 						 Canvas.Left="630"/>
@@ -193,52 +193,52 @@
 
 			<!--#region L2-->
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCP}"
+						 DataContext="{Binding TASC.Power}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCP.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCPt}"
+						 DataContext="{Binding TASC.Pattern}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCPt.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCB}"
+						 DataContext="{Binding TASC.Brake}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCB.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCCO}"
+						 DataContext="{Binding TASC.Off}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="406" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCCO.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding TASCMC}"
+						 DataContext="{Binding TASC.Fault}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="486" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_TASCMC.png"/>
 			<Image Style="{StaticResource L2}"
-						 DataContext="{Binding INT}"
+						 DataContext="{Binding TASC.Inching}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="566" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_INT.png"/>
 			<!--#endregion-->
 
 			<!--#region L3-->
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FP}"
+						 DataContext="{Binding FD.JustPoint}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="166"
 						 Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FP.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding CDAC}"
+						 DataContext="{Binding FD.CarDoorAllClosd}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="246" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_CDAC.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FDAC}"
+						 DataContext="{Binding FD.FDAllClosed}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="326" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FDAC.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FDI}"
+						 DataContext="{Binding FD.SystemConnected}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="406" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FDI.png"/>
 			<Image Style="{StaticResource L3}"
-						 DataContext="{Binding FDICO}"
+						 DataContext="{Binding FD.SystemDisconnected}"
 						 Visibility="{Binding Value, Converter={StaticResource BoolToVisibility}}"
 						 Canvas.Left="486" Source="/caMonPageMod.HMIDisp233;component/resources/E233_Meter2/1000/E233_Lamp1_FDICO.png"/>
 			<!--#endregion-->

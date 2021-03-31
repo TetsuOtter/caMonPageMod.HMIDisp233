@@ -13,7 +13,7 @@ namespace caMonPageMod.HMIDisp233.No2
 			None, ATSP, DATC
 		}
 
-		public Type6k(DataClass dc, Mode mode)
+		public Type6k(HoanLampStates dc, Mode mode)
 		{
 			DataContext = dc;
 			InitializeComponent();

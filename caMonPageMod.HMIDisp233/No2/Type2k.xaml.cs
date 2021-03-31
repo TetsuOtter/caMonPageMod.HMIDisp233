@@ -7,7 +7,7 @@ namespace caMonPageMod.HMIDisp233.No2
 	/// </summary>
 	public partial class Type2k : UserControl
 	{
-		public Type2k(DataClass dc)
+		public Type2k(HoanLampStates dc)
 		{
 			DataContext = dc;
 			InitializeComponent();
