@@ -1,9 +1,14 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net5.0-windows</TargetFramework>
 		<LangVersion>9.0</LangVersion>
     <UseWPF>true</UseWPF>
+		<Version>1.1.0</Version>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/TetsuOtter/caMonPageMod.HMIDisp233</PackageProjectUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageReleaseNotes>https://github.com/TetsuOtter/caMonPageMod.HMIDisp233/blob/master/UpdateLog.md</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
@@ -81,10 +86,15 @@
     <None Remove="resources\E233_Meter2\7000\E233_Lamp2_PtnL.png" />
     <None Remove="resources\E233_Meter2\7000\E233_Meter2BG_ATACS.png" />
     <None Remove="resources\E233_Meter2\7000\E233_Meter2BG_ATS.png" />
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="caMon.IPages" Version="1.0.0.2" />
+    <PackageReference Include="BIDSDataUpdateNotifier" Version="1.0.0" />
+    <PackageReference Include="caMon.IPages" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
